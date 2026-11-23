@@ -14,8 +14,12 @@ curl.exe -v --cert-type P12 --cert "${P12File}:${P12Password}" "$Url" -k
 
 ```bash
 export MSYS_NO_PATHCONV=1
-curlPath="/path/to/curl/bin"   # Optional: set this path if you need a specific curl binary.
-export PATH="$curlPath:$PATH"  # Comment this line if curl in PATH is already correct.
+curlPath="/path/to/curl/bin"  # use the path where you download curl, you will find curl in bin folder.
+export PATH="$curlPath:$PATH"  
+
+###################
+# this three commands to put only once at the beginning when you open the terminal
+###################
 
 URL="https://celia-pp.corp.intraxa"
 P12_FILE="/path/to/certificate.p12"
