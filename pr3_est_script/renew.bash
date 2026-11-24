@@ -49,3 +49,4 @@ openssl req -new -nodes -sha256 -newkey rsa:2048 -keyout "${new_private_key_path
 
 ${curlcmd} -X POST  $reenrollEndpoint --data-binary "@${new_csr_path}"  --cert "${old_cert_path}" --key "${old_key_path}" -H "Content-Type: application/pkcs10" 
 
+# your job to use the certificate with the right format.
