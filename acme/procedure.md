@@ -11,7 +11,7 @@ sudo admin.sh yum --enablerepo P_HOMEBREW_DIS install horizon-cli
 ## 2. Configure the production endpoint
 
 ```bash
-/opt/horizon/bin/horizon-cli install --endpoint "https://clm-pp-pki.celia.corp.intraxa"
+/opt/horizon/bin/horizon-cli install --endpoint "https://protocol.clm-pp-pki.corp.intraxa"
 ```
 
 Successful configuration should include output similar to:
