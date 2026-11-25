@@ -42,7 +42,7 @@ Expected output:
   --acme-account=$(hostname@axa.com) \
   --contact-email=PUT_The_Email_HERE \
   --target generic \
-  --team=PUT_The_SILVA_ID
+  --team=PUT_The_SILVA_ID \
   --dnsnames "$(hostname -f)" \
   --destination-folder=XXXXX \
   --cert server.pem \
