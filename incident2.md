@@ -3,7 +3,7 @@ Hello,
 I tried to contact the PKI team, and I was informed that they have all left.
 You have been assigned as the backup task force to handle this incident.
 
-The URL https://celia-pp.corp.intraxa appears to be in a P1 incident state. 
+The URL https://celia-pp.corp.intraxa (if you don't have access use this url https://ec2-65-0-180-54.ap-south-1.compute.amazonaws.com)appears to be in a P1 incident state. 
 
 The URL works with client authentication using a password-protected file, but we have 4 clients who cannot use the URL.
 
