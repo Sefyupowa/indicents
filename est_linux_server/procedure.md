@@ -38,7 +38,7 @@ Expected output:
 ```bash
 /opt/horizon/bin/horizon-cli automate enroll \
   --automation-policy=pp1-est-serverauth \
-  --challenge="PUT_challenge_here"
+  --challenge="PUT_challenge_here" \
   --target generic \
   --destination-folder=XXXXX \
   --cert server.pem \
@@ -50,12 +50,24 @@ Expected output:
 On success, the output should confirm that the certificate was issued and installed, for example:
 
 ```text
-[INFO] Enrolling with ACME
-[INFO] Certificate backup created
-[INFO] Server responded with a certificate.
-[INFO] Installed certificate in '/tmp/server.pem'
-[INFO] Installed secret in '/tmp/server.key'
-[INFO] Installed chain in '/tmp/chain.pem'
+# You are about to enroll a new certificate in order to replace a certificate bound to an application running on your machine
+2026/11/25 18:35:26 [INFO]  1 tls services targeted
+Searching for certificates in generic configuration 100% [========================================] (1/1)
+2026/11/25 18:35:26 [INFO]  Generating new certificate for generic
+2026/11/25 18:35:26 [INFO]  Found 1 certificates in 1 services
+2026/11/25 18:35:26 [INFO]  Enrolling certificate CN=New Certificate, DNS=frlow01a205302.ppprivmgmt.intraxa (generic-945d5f5c-d361-4219-a49d-7b2dd8c0ecd4)
+2026/11/25 18:35:26 [INFO]  Enrolling with EST
+2026/11/25 18:35:26 [INFO]  Enrolling with authMode: challenge
+2026/11/25 18:35:26 [INFO]  Certificate backup created
+2026/11/25 18:35:44 [INFO]  New certificate has been enrolled (serial: 660003d9d920c392ab0a016dc800010003d9d9)
+2026/11/25 18:35:44 [INFO]  CA chain has been retrieved
+2026/11/25 18:35:44 [WARN]  Service generic required initialization, disabling --no-install option
+2026/11/25 18:35:44 [INFO]  Installed certificate in '/tmp/test_ket2/server.pem'
+2026/11/25 18:35:44 [INFO]  Installed secret in '/tmp/test_ket2/server.key'
+2026/11/25 18:35:44 [INFO]  Installed chain in '/tmp/test_ket2/chain.pem'
+2026/11/25 18:35:44 [INFO]  Reloading 0 service(s)
+[lin_ops@frlow01a205302 ~]$
+
 ```
 
 ## Renew the certificate
