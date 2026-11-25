@@ -4,13 +4,13 @@ Follow these steps to install and configure `horizon-cli`, verify connectivity, 
 
 ## 1. Install `horizon-cli`
 
-```bash
+```powershell
 choco install horizon-cli -y
 ```
 
 ## 2. Configure the production endpoint
 
-```bash
+```powershell
 horizon-cli install --endpoint "https://protocol.clm-pp-pki.corp.intraxa"
 ```
 
@@ -23,7 +23,7 @@ Successful configuration should include output similar to:
 
 ## 3. Verify connectivity
 
-```bash
+```powershell
 horizon-cli ping --permissions
 ```
 
@@ -78,19 +78,19 @@ PS C:\Users\ZZAGOD035512WINSUP01>
 ## Check the certificate
 Take the has found in the output
 
-```bash
+```text
 2026/11/25 16:32:01 [INFO]  Installed certificate in 'Cert:LocalMachine\My\f2c49121f59c14d791cfd1f7789397378b6105bc'
 ```
 
 and check the certificate.
 
-```bash
+```powershell
 certutil.exe -v -store My f2c49121f59c14d791cfd1f7789397378b6105bc
 ```
 
 ## Renew the certificate
 
-```bash
+```powershell
 horizon-cli automate routine
 ```
 
