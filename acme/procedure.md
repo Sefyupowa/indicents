@@ -39,7 +39,7 @@ Expected output:
 /opt/horizon/bin/horizon-cli automate enroll \
   --automation-policy=pp1-acme-serverauth \
   --owner=PUT_The_Email_HERE \
-  --acme-account=$(hostname@axa.com) \
+  --acme-account="$(hostname)@axa.com" \
   --contact-email=PUT_The_Email_HERE \
   --target generic \
   --team=PUT_The_SILVA_ID \
