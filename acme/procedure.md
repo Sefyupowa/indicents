@@ -11,7 +11,7 @@ sudo admin.sh yum --enablerepo P_HOMEBREW_DIS install horizon-cli
 ## 2. Configure the production endpoint
 
 ```bash
-/opt/horizon/bin/horizon-cli install --endpoint "https://protocol.celia.corp.intraxa"
+/opt/horizon/bin/horizon-cli install --endpoint "https://clm-pp-pki.celia.corp.intraxa"
 ```
 
 Successful configuration should include output similar to:
@@ -37,11 +37,12 @@ Expected output:
 
 ```bash
 /opt/horizon/bin/horizon-cli automate enroll \
-  --automation-policy=pr3-acme-serverauth-test \
-  --owner=badr.ouarafana@axa.com \
-  --acme-account=badr.ouarafana@axa.com \
-  --contact-email=badr.ouarafana@axa.com \
+  --automation-policy=pp1-acme-serverauth \
+  --owner=PUT_The_Email_HERE \
+  --acme-account=$(hostname@axa.com) \
+  --contact-email=PUT_The_Email_HERE \
   --target generic \
+  --team=PUT_The_SILVA_ID
   --dnsnames "$(hostname -f)" \
   --destination-folder=XXXXX \
   --cert server.pem \
