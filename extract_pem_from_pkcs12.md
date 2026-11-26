@@ -12,6 +12,9 @@ openssl pkcs12 -in server.pfx -nocerts -nodes -out private.key
 
 ```bash
 openssl pkcs12 -in server.pfx -clcerts -nokeys -out server.crt
+### or 
+
+openssl pkcs12 -in fail.p12 -nokeys -out certs.pem
 ```
 
 ## 3. Extract CA bundle (chain)
